@@ -64,6 +64,8 @@ Nodemon Not Found: Run npm install -g nodemon or use node server.js as a fallbac
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 Acknowledgments
-Built with passion for travel and technology. Special thanks to the open-source community for tools like Node.js, MongoDB, and Cloudinary.
+Built with passion for travel and technology. Special thanks to the open-source community for tools like Node.js, MongoDB.
+
 Made  by ANSH OBERAI
+
 Happy traveling with Wanderlust! 🌎✨
