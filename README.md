@@ -1,77 +1,69 @@
-Wanderlust Web Project - Installation Guide
+Wanderlust - Airbnb Clone Project🔥
+Welcome to Wanderlust, a feature-rich web application inspired by Airbnb, designed to help users discover, book, and manage travel accommodations with ease. This project includes user authentication, map integration for location-based browsing, and a seamless booking system. Follow the steps below to set up and run Wanderlust on your local machine.
+Features
 
-Welcome to the Wanderlust web project! Follow the steps below to set up and run the project locally on your machine.
+User Authentication: Secure login and registration system for personalized user experiences.
+Map Integration: Interactive maps to explore listings by location.
+Booking System: Easy-to-use interface for booking accommodations.
+Cloudinary Integration: Upload and manage images for listings.
+Responsive Design: Optimized for both desktop and mobile devices.
 
 Prerequisites
+Before you begin, ensure the following are installed on your system:
 
-Before starting, ensure you have the following installed on your system:
-
-Node.js (Recommended: Version 18)
-
-MongoDB (Local or Atlas)
-
-Nodemon (Installed globally: npm install -g nodemon)
+Node.js: Version 18 or higher (LTS recommended).
+MongoDB: Either a local MongoDB instance or a MongoDB Atlas account.
+Nodemon: Install globally using npm install -g nodemon for automatic server restarts during development.
 
 Installation Steps
-
 1. Clone the Repository
+Clone the Wanderlust repository from your preferred Git hosting service and navigate to the project directory:
+git clone git remote add origin https://github.com/anshob257/wanderlust-.git
+cd Wanderlust
 
-Run the following command to clone the Wanderlust repository from GitHub:
+2. Set Up Environment Variables
+Create a .env file in the root directory and add the following configurations:
+# MongoDB connection string (use local MongoDB or Atlas URL)
+MONGODB_URI=mongodb://localhost:27017/wanderlust
 
-git clone https://github.com/Samarth0802/Wanderlust.git
-cd Wanderlust-Major-Project
+# Application secret for session management
+APP_SECRET=your_secure_application_secret
 
-2. Configure the Database
 
-Create a .env file in the root directory.
+MongoDB: Replace MONGODB_URI with your MongoDB Atlas connection string or keep the local default if using a local MongoDB instance.
+APP_SECRET: Use a strong, unique string for securing sessions.
 
-Add the following database connection string:
-
-ATLASDB_URL=mongodb://127.0.0.1:27017/wanderlust
-
-3. Set Up Cloudinary
-
-Sign up for a free Cloudinary account.
-
-Retrieve your CLOUD_NAME, CLOUD_API_KEY, and CLOUD_API_SECRET from your Cloudinary dashboard.
-
-Add these details to your .env file:
-
-CLOUD_NAME=your_cloud_name
-CLOUD_API_KEY=your_api_key
-CLOUD_API_SECRET=your_api_secret
-
-4. Configure Application Secret
-
-Add a secure secret key to your .env file:
-
-SECRET=your_secure_secret_key
-
-5. Install Dependencies
-
-Run the following command to install required packages:
-
+3. Install Dependencies
+Install the required Node.js packages by running:
 npm install
 
-6. Start the Application
+4. Start the Development Server
+Launch the application using Nodemon to enable live reloading:
+nodemon server.js
 
-Use Nodemon to start the project:
+If Nodemon is unavailable, you can start the server with:
+node server.js
 
-nodemon app.js
+5. Access the Application
+Once the server is running, open your browser and navigate to:
+http://localhost:3000
 
-7. Access the Application
+6. Explore the Application
 
-Once the server is running, open your browser and visit:
-
-http://localhost:8080
+Register/Login: Create an account or log in to access personalized features.
+Browse Listings: Use the map to explore accommodations.
+Book a Stay: Select a listing and complete the booking process.
 
 Troubleshooting
 
-Ensure MongoDB is running locally (mongod service) or that the provided Atlas URL is correct.
+MongoDB Issues: Ensure your MongoDB service (mongod) is running or verify your MongoDB Atlas connection string.
+Environment Variables: Double-check .env file values for accuracy, especially Cloudinary and MongoDB configurations.
+Port Conflicts: If localhost:3000 is unavailable, check for other running services or change the port in server.js.
+Nodemon Not Found: Run npm install -g nodemon or use node server.js as a fallback.
 
-Double-check your .env file values, especially the database and Cloudinary configurations.
-
-If nodemon is not recognized, try running the app with node app.js.
-
-Congratulations! 🎉 You have successfully set up the Wanderlust web project. If you encounter any issues, feel free to ask for help. Happy exploring! 🌍✨
-
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+Acknowledgments
+Built with passion for travel and technology. Special thanks to the open-source community for tools like Node.js, MongoDB, and Cloudinary.
+Made  by ANSH OBERAI
+Happy traveling with Wanderlust! 🌎✨
